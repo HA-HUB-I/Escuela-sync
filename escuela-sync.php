@@ -18,7 +18,7 @@ register_deactivation_hook(__FILE__, 'escuela_store_sync_deactivate');
 add_action('init', 'escuela_store_sync_init');
 
 // Enqueue scripts
-add_action('admin_enqueue_scripts', 'escuela_store_sync_enqueue_scripts');
+//add_action('admin_enqueue_scripts', 'escuela_store_sync_enqueue_scripts');
 
 // Add AJAX handlers
-add_action('wp_ajax_escuela_store_sync', 'escuela_store_sync_ajax_handler');
+//add_action('wp_ajax_escuela_store_sync', 'escuela_store_sync_ajax_handler');

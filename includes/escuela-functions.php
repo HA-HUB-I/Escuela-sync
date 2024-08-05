@@ -55,6 +55,7 @@ function escuela_store_sync_update_products() {
             $product_data = array(
                 'ID'           => $sku,
                 'post_content' => $product->description,
+				'tags_input' => 'foo,bar,baz'
             );
             wp_update_post($product_data);
         } else {
@@ -64,7 +65,10 @@ function escuela_store_sync_update_products() {
                 'post_content' => $product->description,
                 'post_status'  => 'publish',
                 'post_type'    => 'product',
-                // 'meta_input'   => array(
+				'tags_input' => 'foo,bar,baz'
+				
+                //'meta_input'   => array(
+			     // 'tags_input'  => 'escuela',
                 //     '_sku' => $sku,
                 // ),
             );
@@ -73,6 +77,7 @@ function escuela_store_sync_update_products() {
 
         // Add/update product meta (price, category, image, etc.)
         update_post_meta($existing_product_id, '_price', $product->price);
+		wp_set_post_terms($product_id, 'escuela' , 'post_tag');
 
         // Handle categories
         if (!empty($product->category)) {

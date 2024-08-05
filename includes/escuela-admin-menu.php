@@ -45,9 +45,8 @@ function escuela_store_sync_settings_init() {
         'escuela_store_sync_settings_section'
     );
 
-//     register_setting('escuela_store_sync_settings', 'escuela_api_url');
- }
-
+   
+}
 // function escuela_store_sync_settings_section_callback() {
 //     echo '<p>Настройки за синхронизация на Escuela Store Sync.</p>';
 // }
