@@ -22,3 +22,9 @@ add_action('init', 'escuela_store_sync_init');
 
 // Add AJAX handlers
 //add_action('wp_ajax_escuela_store_sync', 'escuela_store_sync_ajax_handler');
+
+// Enqueue scripts
+add_action('admin_enqueue_scripts', 'escuela_store_sync_enqueue_scripts');
+
+// Add AJAX handlers
+add_action('wp_ajax_escuela_store_sync', 'escuela_store_sync_ajax_handler');
